@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "Contact.h"
+#include "contact.h"
 
 using namespace std;
 
@@ -81,6 +81,9 @@ class Driver{
 
         cout<<"Enter phone number : ";
         cin>>phone;
+        
+        transform(first_name.begin(), first_name.end(), first_name.begin(), ::tolower);
+        transform(last_name.begin(), last_name.end(), last_name.begin(), ::tolower);
 
         Contact_list.push_back(Contact(phone, first_name, last_name));
     }
