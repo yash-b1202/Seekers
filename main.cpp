@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 #include "driver.h"
+
 using namespace std;
 void func(){
     Driver driver;
@@ -14,7 +15,7 @@ void func(){
         cin>>ch;
         if(ch==1)
         {
-            driver.add_contact();
+            driver.add_Contact();
         }
         else if(ch==2)
         {
