@@ -28,6 +28,10 @@ class Driver{
                 }
             }
         }
+        if(result.size()==0){
+            cout << "\nNot Found";
+        }
+        else
         display(result);
     }
 
@@ -67,7 +71,11 @@ class Driver{
                 }
             }
         }
-        display(result);
+        if(result.size()==0){
+            cout << "\nNot Found";
+        }
+        else
+            display(result);
     }
 
     void add_Contact(){
@@ -91,7 +99,9 @@ class Driver{
                 return;
             }
         }
+
         Contact_list.push_back(Contact(phone, first_name, last_name));
+        cout << "\nContact Added !!";
     }
 
     void full_display(){
