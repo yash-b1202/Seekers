@@ -81,10 +81,16 @@ class Driver{
 
         cout<<"Enter phone number : ";
         cin>>phone;
-        
+
         transform(first_name.begin(), first_name.end(), first_name.begin(), ::tolower);
         transform(last_name.begin(), last_name.end(), last_name.begin(), ::tolower);
 
+        for(int i=0;i<Contact_list.size();i++){
+            if(first_name==Contact_list[i].f_name && last_name==Contact_list[i].l_name && phone==Contact_list[i].phone_no){
+                cout<<"Duplicate Entry ! \n";
+                return;
+            }
+        }
         Contact_list.push_back(Contact(phone, first_name, last_name));
     }
 
